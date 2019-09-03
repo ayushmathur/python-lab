@@ -10,21 +10,21 @@
 #################################################################################################
 dy = int(input('Enter the days in the month: '))
 sdy = int(input('Enter the first day : '))
-#Controller to track characters used in the column. 
+#Buffer to track characters used in the column. 
 #It is initialized to amount used by cursor before it prints the first date
-ctr = ???
+ctr = ((sdy)*3) 
 print('S  M  T  W  T  F  S') #Print days header
-print(???, end=???)   #Print spaces to the place where first date is printed
-for dt in range(???,???):           #Loop to print dates 1-9
-    print(???,end=???)        #print date and 2 spaces
-    ctr+=???                  #increment the controller
-    if ctr >= ???:                  #Check if workspace is exhausted and go to next line
+print(" "*sdy*3, end="")   #Print spaces to the place where first date is printed
+for dt in range(1,10):           #Loop to print dates 1-9
+    print(dt,end="  ")        #print date and 2 spaces
+    ctr+=3
+    if ctr >= 19:                  #Check if workspace is exhausted and go to next line
         print("\n")
-        ctr=???                     #Reset controller
-for dt in range(???,???):       #Loop to print dates 10 onwards
-    print(???,end=???)         #print date and 1 space
-    ctr+=???                         #Rest of loop is same as last one
-    if ctr >= ???:
+        ctr=0
+for dt in range(10,dy+1):       #Loop to print dates 10 onwards
+    print(dt,end=" ")         #print date and 1 space
+    ctr+=3                         #Rest of loop is same as last one
+    if ctr >= 19:
         print("\n")
-        ctr=???
+        ctr=0
 print("\n")
