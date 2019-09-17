@@ -1,4 +1,3 @@
-# Test file
 # Author- Ayuah Mathur
 """We can define sum from 1 to x (i.e. 1 + 2 + ... + x) recursively as follows 
 for integer x ≥1:
